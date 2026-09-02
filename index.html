@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Second Sight Scientific — Medical Editing &amp; Scientific Review</title>
+<meta name="description" content="Freelance medical editing, HCP fact-checking, and scientific strategy from a practicing optometrist with agency med-comms experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&family=Spectral:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBFAF7; --card:#FFFFFF; --ink:#1F2933; --muted:#5A6672; --faint:#8A94A0;
+    --accent:#2A6F6B; --accent-ink:#1E5450; --wash:#EDF3F1; --border:#E3E1DA;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.6 "Public Sans",system-ui,sans-serif; -webkit-font-smoothing:antialiased}
+  .wrap{max-width:880px; margin:0 auto; padding:0 24px}
+  a{color:var(--accent-ink)}
+
+  header{padding:20px 0; border-bottom:1px solid var(--border)}
+  header .wrap{display:flex; align-items:center; justify-content:space-between; gap:16px}
+  .brand{font-family:"Spectral",Georgia,serif; font-weight:600; font-size:18px; letter-spacing:.01em;
+    color:var(--ink); text-decoration:none; display:flex; align-items:center; gap:10px}
+  .brand svg{flex:none}
+  nav a{color:var(--muted); text-decoration:none; font-size:14px; font-weight:600; margin-left:22px}
+  nav a:hover{color:var(--accent-ink)}
+  @media (max-width:560px){ nav{display:none} }
+
+  .hero{padding:84px 0 72px}
+  .eyebrow{font-size:13px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); margin:0 0 14px}
+  h1{font-family:"Spectral",Georgia,serif; font-weight:600; font-size:clamp(32px,5.5vw,46px);
+    line-height:1.15; margin:0 0 18px; max-width:18ch}
+  .lede{font-size:19px; color:var(--muted); max-width:56ch; margin:0 0 30px}
+  .cta{display:inline-block; background:var(--accent); color:#fff; text-decoration:none;
+    font-weight:600; font-size:16px; padding:13px 26px; border-radius:8px}
+  .cta:hover{background:var(--accent-ink)}
+  .cta.ghost{background:transparent; color:var(--accent-ink); border:1.5px solid var(--accent);
+    margin-left:12px}
+  .cta.ghost:hover{background:var(--wash)}
+
+  section{padding:64px 0; border-top:1px solid var(--border)}
+  h2{font-family:"Spectral",Georgia,serif; font-weight:600; font-size:28px; margin:0 0 8px}
+  .sub{color:var(--muted); margin:0 0 32px; max-width:62ch}
+
+  .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+  @media (max-width:720px){ .cards{grid-template-columns:1fr} }
+  .card{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:24px 22px}
+  .card h3{font-size:17px; font-weight:700; margin:0 0 10px}
+  .card p{font-size:15px; color:var(--muted); margin:0}
+
+  .cred{display:grid; grid-template-columns:1fr 1fr; gap:14px 40px; max-width:720px}
+  @media (max-width:640px){ .cred{grid-template-columns:1fr} }
+  .cred div{display:flex; gap:12px; align-items:flex-start; font-size:15.5px}
+  .cred svg{flex:none; margin-top:4px}
+
+  .steps{counter-reset:s; max-width:640px; padding:0; margin:0; list-style:none}
+  .steps li{counter-increment:s; position:relative; padding:0 0 26px 56px}
+  .steps li::before{content:counter(s); position:absolute; left:0; top:-2px; width:36px; height:36px;
+    border-radius:50%; background:var(--wash); color:var(--accent-ink); font-weight:700;
+    display:flex; align-items:center; justify-content:center; font-size:15px}
+  .steps b{display:block; margin-bottom:3px}
+  .steps p{margin:0; color:var(--muted); font-size:15px}
+
+  .contact-box{background:var(--card); border:1px solid var(--border); border-radius:14px;
+    padding:36px 32px; display:flex; flex-wrap:wrap; align-items:center; gap:24px; justify-content:space-between}
+  .contact-box .big{font-family:"Spectral",Georgia,serif; font-size:22px; font-weight:600; margin:0 0 6px}
+  .contact-box p{margin:0; color:var(--muted)}
+
+  footer{padding:34px 0 46px; font-size:13.5px; color:var(--faint)}
+  footer .wrap{display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:space-between}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Second Sight Scientific home">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+        <ellipse cx="13" cy="13" rx="11.5" ry="7.2" stroke="#2A6F6B" stroke-width="1.8"/>
+        <circle cx="13" cy="13" r="3.4" fill="#2A6F6B"/>
+      </svg>
+      Second Sight Scientific
+    </a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">Medical editing · Scientific review</p>
+    <h1>A second set of eyes, with a clinician's first-hand view.</h1>
+    <p class="lede">Second Sight Scientific provides freelance medical editing, healthcare-professional
+    fact-checking, and scientific strategy for medical-communications agencies and life-science
+    teams — from a practicing doctor of optometry with agency-side med-comms experience.</p>
+    <a class="cta" href="#contact">Book an intro call</a>
+    <a class="cta ghost" href="mailto:ranju@secondsightscientific.com">Email a project</a>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <h2>Services</h2>
+    <p class="sub">Engagements are typically hourly or per-deliverable, on your style guide and your
+    timelines. Rates on request.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Medical editing</h3>
+        <p>Substantive and copy editing of promotional and educational materials, slide decks,
+        manuscripts, and digital content — AMA style, house styles, and reference annotation.</p>
+      </div>
+      <div class="card">
+        <h3>HCP fact-checking &amp; review</h3>
+        <p>Clinical accuracy review by a licensed healthcare professional: claims substantiation,
+        data-vs-source verification, and reference checks ahead of med-legal review.</p>
+      </div>
+      <div class="card">
+        <h3>Scientific strategy</h3>
+        <p>Scientific-platform and content-strategy support: literature synthesis, congress coverage,
+        advisory-board materials, and therapeutic-area onboarding for account teams.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p class="sub">Second Sight Scientific is the independent practice of a clinician-editor who has
+    worked both sides of the desk — the clinic and the agency.</p>
+    <div class="cred">
+      <div>
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.5l4 4 8-9" stroke="#2A6F6B" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        Doctor of Optometry (OD), licensed and in active clinical practice
+      </div>
+      <div>
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.5l4 4 8-9" stroke="#2A6F6B" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        Agency med-comms background: medical editor &amp; scientific strategist
+      </div>
+      <div>
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.5l4 4 8-9" stroke="#2A6F6B" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        Promotional, educational, and scientific-platform deliverables
+      </div>
+      <div>
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.5l4 4 8-9" stroke="#2A6F6B" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        AMA Manual of Style; comfortable in Veeva/Zinc-style review workflows
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <h2>How an engagement works</h2>
+    <p class="sub">Built for agency overflow and deadline weeks — easy to start, easy to scale down.</p>
+    <ol class="steps">
+      <li><b>Intro call</b><p>Fifteen minutes on scope, style guides, volumes, and turnaround expectations.</p></li>
+      <li><b>Trial deliverable</b><p>A first piece at the standard rate so you can judge fit on real work, not a resume.</p></li>
+      <li><b>Ongoing overflow</b><p>Hourly or per-piece, with agreed turnaround windows. Weekend and rush coverage available.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <div class="contact-box">
+      <div>
+        <p class="big">Have a deadline that needs another set of eyes?</p>
+        <p>Email <a href="mailto:ranju@secondsightscientific.com">ranju@secondsightscientific.com</a>
+        or book a fifteen-minute intro call.</p>
+      </div>
+      <!-- TODO: replace href with the Google Calendar appointment-schedule link once created -->
+      <a class="cta" href="mailto:ranju@secondsightscientific.com?subject=Intro%20call">Book an intro call</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Second Sight Scientific LLC · Austin, Texas</span>
+    <span><a href="mailto:ranju@secondsightscientific.com">ranju@secondsightscientific.com</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

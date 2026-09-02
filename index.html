@@ -51,6 +51,11 @@
   .card h3{font-size:17px; font-weight:700; margin:0 0 10px}
   .card p{font-size:15px; color:var(--muted); margin:0}
 
+  .about-row{display:flex; gap:28px; align-items:center; margin:0 0 30px}
+  @media (max-width:560px){ .about-row{flex-direction:column; align-items:flex-start} }
+  .portrait{width:168px; height:168px; border-radius:50%; object-fit:cover; flex:none;
+    border:3px solid var(--wash); box-shadow:0 1px 6px rgba(31,41,51,.12)}
+  .who{font-family:"Spectral",Georgia,serif; font-weight:600; font-size:22px; margin:0 0 8px}
   .cred{display:grid; grid-template-columns:1fr 1fr; gap:14px 40px; max-width:720px}
   @media (max-width:640px){ .cred{grid-template-columns:1fr} }
   .cred div{display:flex; gap:12px; align-items:flex-start; font-size:15.5px}
@@ -100,7 +105,7 @@
     <p class="lede">Second Sight Scientific provides freelance medical editing, healthcare-professional
     fact-checking, and scientific strategy for medical-communications agencies and life-science
     teams — from a practicing doctor of optometry with agency-side med-comms experience.</p>
-    <a class="cta" href="#contact">Book an intro call</a>
+    <a class="cta" href="https://calendar.google.com/calendar/u/0/r/appointment/q3jsd7aaeenab1ihdlki8m5594_cmFuanVAc2Vjb25kc2lnaHRzY2llbnRpZmljLmNvbQ" target="_blank" rel="noopener">Book an intro call</a>
     <a class="cta ghost" href="mailto:ranju@secondsightscientific.com">Email a project</a>
   </div>
 </div>
@@ -133,8 +138,15 @@
 <section id="about">
   <div class="wrap">
     <h2>About</h2>
-    <p class="sub">Second Sight Scientific is the independent practice of a clinician-editor who has
-    worked both sides of the desk — the clinic and the agency.</p>
+    <div class="about-row">
+      <img class="portrait" src="ranju.jpeg" alt="Portrait of Dr. Ranju" width="168" height="168">
+      <div>
+        <h3 class="who">Dr.&nbsp;Ranju, OD</h3>
+        <p class="sub" style="margin-bottom:0">Second Sight Scientific is the independent practice of
+        Dr.&nbsp;Ranju — a clinician-editor who has worked both sides of the desk: the clinic and
+        the agency.</p>
+      </div>
+    </div>
     <div class="cred">
       <div>
         <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.5l4 4 8-9" stroke="#2A6F6B" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
@@ -177,8 +189,7 @@
         <p>Email <a href="mailto:ranju@secondsightscientific.com">ranju@secondsightscientific.com</a>
         or book a fifteen-minute intro call.</p>
       </div>
-      <!-- TODO: replace href with the Google Calendar appointment-schedule link once created -->
-      <a class="cta" href="mailto:ranju@secondsightscientific.com?subject=Intro%20call">Book an intro call</a>
+      <a class="cta" href="https://calendar.google.com/calendar/u/0/r/appointment/q3jsd7aaeenab1ihdlki8m5594_cmFuanVAc2Vjb25kc2lnaHRzY2llbnRpZmljLmNvbQ" target="_blank" rel="noopener">Book an intro call</a>
     </div>
   </div>
 </section>

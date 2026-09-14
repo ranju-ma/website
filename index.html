@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Second Sight Scientific — Medical Editing &amp; Clinical Review</title>
-<meta name="description" content="Second Sight Scientific is the independent medical editing and clinical review practice of Ranju Welch, OD. Medical editing, HCP fact-checking, and scientific strategy for medical communications agencies and life science teams.">
+<title>Second Sight Scientific—Medical Editing &amp; Clinical Review</title>
+<meta name="description" content="Second Sight Scientific is the consulting medical editing and clinical review practice of Ranju Welch, OD. Medical editing, fact-checking, and scientific strategy for health care agencies and life science teams.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Archivo:wght@400;500&display=swap" rel="stylesheet">
@@ -95,7 +95,7 @@ header{
   gap:1.5rem;height:4.25rem;
 }
 .brand{display:flex;align-items:center;gap:.8rem;text-decoration:none}
-.brand .mark{color:var(--ink);display:block}
+.brand .mark{color:var(--ink);display:block;transition:opacity .3s ease}
 html.intro-running #brandMark{opacity:0}
 .brand-name{
   font-family:var(--serif);font-weight:420;font-size:1.02rem;letter-spacing:.01em;
@@ -180,18 +180,6 @@ nav[aria-label="Primary"] a:hover{border-bottom-color:var(--oxblood)}
   color:var(--oxblood);letter-spacing:0;text-transform:none;
   font-size:.9rem;margin-right:.45em;
 }
-
-/* journal front-matter line (grafted from concept 3's hero-meta dl) */
-.hero-meta{
-  display:flex;flex-wrap:wrap;justify-content:center;
-  gap:.5rem clamp(1.5rem,4vw,3rem);
-  margin:0;padding:1rem 0;
-  border-bottom:1px solid var(--rule);
-  color:var(--ink-70);font-size:.86rem;
-}
-.hero-meta div{display:flex;gap:.55em;align-items:baseline}
-.hero-meta dt{font-family:var(--serif);font-style:italic;color:var(--oxblood);font-size:.9rem}
-.hero-meta dd{margin:0}
 
 /* ————————————————————————————— section furniture ————————————————————————————— */
 .section{padding-block:clamp(4rem,9vw,7rem)}
@@ -499,9 +487,25 @@ footer{border-top:1px solid var(--rule)}
 
 <header>
   <div class="wrap header-inner">
-    <a class="brand" href="#top" aria-label="Second Sight Scientific — home">
+    <a class="brand" href="#top" aria-label="Second Sight Scientific—home">
       <span id="brandMark" class="mark" aria-hidden="true">
-        <svg width="32" height="32" viewBox="0 0 120 120" focusable="false"><use href="#emblem"/></svg>
+        <!-- inlined (not <use>) so the mark paints reliably inside the
+             backdrop-filter header on every engine -->
+        <svg width="36" height="36" viewBox="0 0 120 120" focusable="false">
+          <circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="1.25" vector-effect="non-scaling-stroke"/>
+          <circle cx="60" cy="60" r="51" fill="none" stroke="currentColor" stroke-width="0.75" opacity="0.55" vector-effect="non-scaling-stroke"/>
+          <g fill="none" stroke="#6E2A24" stroke-width="3.4" stroke-linecap="round">
+            <path d="M 4.3 -6.4 C 3.2 -8.3 0.4 -9.1 -1.8 -8.3 C -4.3 -7.4 -5 -4.6 -3.2 -2.8 C -1.6 -1.2 1.5 -1.4 3.2 0.3 C 5 2.1 5.2 5.1 3.2 6.9 C 1 8.8 -2.5 8.6 -4.3 6.5" transform="translate(60 34)"/>
+            <path d="M 4.3 -6.4 C 3.2 -8.3 0.4 -9.1 -1.8 -8.3 C -4.3 -7.4 -5 -4.6 -3.2 -2.8 C -1.6 -1.2 1.5 -1.4 3.2 0.3 C 5 2.1 5.2 5.1 3.2 6.9 C 1 8.8 -2.5 8.6 -4.3 6.5" transform="rotate(120 60 60) translate(60 34)"/>
+            <path d="M 4.3 -6.4 C 3.2 -8.3 0.4 -9.1 -1.8 -8.3 C -4.3 -7.4 -5 -4.6 -3.2 -2.8 C -1.6 -1.2 1.5 -1.4 3.2 0.3 C 5 2.1 5.2 5.1 3.2 6.9 C 1 8.8 -2.5 8.6 -4.3 6.5" transform="rotate(240 60 60) translate(60 34)"/>
+          </g>
+          <g stroke="currentColor" stroke-width="1" opacity="0.7">
+            <line x1="60" y1="20" x2="60" y2="14" transform="rotate(60 60 60)" vector-effect="non-scaling-stroke"/>
+            <line x1="60" y1="20" x2="60" y2="14" transform="rotate(180 60 60)" vector-effect="non-scaling-stroke"/>
+            <line x1="60" y1="20" x2="60" y2="14" transform="rotate(300 60 60)" vector-effect="non-scaling-stroke"/>
+          </g>
+          <circle cx="60" cy="60" r="2.2" fill="#6E2A24"/>
+        </svg>
       </span>
       <span class="brand-name">Second Sight Scientific</span>
     </a>
@@ -522,12 +526,12 @@ footer{border-top:1px solid var(--rule)}
   <!-- ————————————————— hero ————————————————— -->
   <section class="hero wrap" id="top" aria-labelledby="hero-title">
     <p class="sc eyebrow fp">Independent Medical Communications Support</p>
-    <h1 id="hero-title" class="fp" style="--fd:70ms">A <em>second set of eyes</em>,<br>with a clinician&rsquo;s firsthand view.</h1>
+    <h1 id="hero-title" class="fp" style="--fd:70ms">A <em>Second Set of Eyes</em><br>With a Clinician&rsquo;s Firsthand View</h1>
     <hr class="hero-rule fp" aria-hidden="true" style="--fd:130ms">
     <p class="lede fp" style="--fd:180ms">
-      Second Sight Scientific is the independent practice of Ranju&nbsp;Welch,&nbsp;OD, a practicing
+      Second Sight Scientific is the consulting practice of Ranju&nbsp;Welch,&nbsp;OD, a practicing
       optometrist with agency-side medical communications experience. She provides overflow editing,
-      clinical review, and scientific strategy for medical communications agencies and life science teams.
+      clinical review, and scientific strategy for health care agencies and life science teams.
     </p>
     <div class="cta-row fp" style="--fd:240ms">
       <a class="btn" href="https://calendar.app.google/x29cEESL4UxWS9pSA" target="_blank" rel="noopener">Book an intro call<span class="sr-only"> (opens in a new tab)</span></a>
@@ -535,14 +539,9 @@ footer{border-top:1px solid var(--rule)}
     </div>
     <div class="contents-line sc fp" style="--fd:300ms">
       <span><i>I.</i> Medical Editing</span>
-      <span><i>II.</i> HCP Fact&#8209;Checking</span>
+      <span><i>II.</i> Fact&#8209;Checking</span>
       <span><i>III.</i> Scientific Strategy</span>
     </div>
-    <dl class="hero-meta fp" style="--fd:360ms">
-      <div><dt>For</dt><dd>Med-comms agencies &amp; life-science teams</dd></div>
-      <div><dt>Practice</dt><dd>Ranju&nbsp;Welch,&nbsp;OD · Clinician-editor</dd></div>
-      <div><dt>Base</dt><dd>Austin, Texas · works remote</dd></div>
-    </dl>
   </section>
 
   <!-- ————————————————— services ————————————————— -->
@@ -552,16 +551,16 @@ footer{border-top:1px solid var(--rule)}
       <article class="service">
         <span class="num" aria-hidden="true">I.</span>
         <h3>Medical Editing</h3>
-        <p>Substantive and copy editing of promotional and educational materials, slide decks,
-           manuscripts, and digital content — tightened for accuracy, clarity, and the review
-           that comes next.</p>
+        <p>Substantive editing and copy editing of promotional and educational materials, slide decks,
+           manuscripts, and digital assets—tightened for scientific clarity, regulatory compliance,
+           and smooth internal review.</p>
         <p class="micro sc sc-dense">AMA style · House styles · Reference annotation</p>
       </article>
       <article class="service">
         <span class="num" aria-hidden="true">II.</span>
-        <h3>HCP Fact&#8209;Checking &amp; Review</h3>
+        <h3>Fact&#8209;Checking &amp; Review</h3>
         <p>Clinical accuracy review by a licensed healthcare professional: claims substantiation,
-           data-versus-source verification, and reference checks — ahead of medicolegal review.</p>
+           data-versus-source verification, and reference checks—ahead of medicolegal review.</p>
         <p class="micro sc sc-dense">Claims substantiation · Data vs. source · Reference checks</p>
       </article>
       <article class="service">
@@ -583,17 +582,17 @@ footer{border-top:1px solid var(--rule)}
           <div class="portrait-frame">
             <img src="ranju.jpeg" width="400" height="400" alt="Portrait of Ranju Welch, OD">
           </div>
-          <figcaption class="sc"><i>Fig. I.</i> Ranju Welch, OD · Austin, Texas</figcaption>
+          <figcaption class="sc">Ranju Welch, OD · Austin, Texas</figcaption>
         </figure>
         <div class="about-copy">
           <h2>Both sides of the desk.</h2>
           <p class="bio">
-            Dr.&nbsp;Welch is a clinician-editor who has worked both sides of the desk — the clinic
+            Dr&nbsp;Welch is a clinician-editor who has worked both sides of the desk—the clinic
             and the agency. She reads a deliverable the way a reviewer will: for the claim, the
             source, and the patient behind both.
           </p>
           <ul class="creds">
-            <li>Doctor of Optometry (OD) — licensed and in active clinical practice</li>
+            <li>Doctor of Optometry (OD)—licensed and in active clinical practice</li>
             <li>Agency medical communications background as medical editor and scientific strategist</li>
             <li>Promotional, educational, and scientific platform deliverables</li>
           </ul>
@@ -615,7 +614,7 @@ footer{border-top:1px solid var(--rule)}
       <li class="step">
         <span class="num" aria-hidden="true">02</span>
         <h3>Trial deliverable</h3>
-        <p>A first piece at standard rate — judge fit on real work, not a pitch.</p>
+        <p>A first piece at standard rate—judge fit on real work, not a pitch.</p>
       </li>
       <li class="step">
         <span class="num" aria-hidden="true">03</span>
@@ -631,12 +630,12 @@ footer{border-top:1px solid var(--rule)}
     <svg class="colophon" width="76" height="76" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#emblem"/></svg>
     <p class="sc eyebrow">Availability &amp; Engagement</p>
     <h2 id="contact-title">Begin with fifteen minutes.</h2>
-    <p class="lede">Scope, style guides, volumes, and turnaround — then a trial piece at standard rate.</p>
+    <p class="lede">Scope, style guides, volumes, and turnaround—then a trial piece at standard rate.</p>
     <div class="cta-row">
       <a class="btn" href="https://calendar.app.google/x29cEESL4UxWS9pSA" target="_blank" rel="noopener">Book an intro call<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="text-link" href="mailto:ranju@secondsightscientific.com">ranju@secondsightscientific.com</a>
     </div>
-    <p class="sc fine">Rates on request · Engagements hourly or per deliverable</p>
+    <p class="sc fine">Rates on request</p>
   </section>
   </div>
 

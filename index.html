@@ -5,6 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Second Sight Scientific—Medical Editing &amp; Clinical Review</title>
 <meta name="description" content="Second Sight Scientific is the consulting medical editing and clinical review practice of Ranju Welch, OD. Medical editing, fact-checking, and scientific strategy for health care agencies and life science teams.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#F5F0E6">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://secondsightscientific.com/">
+<meta property="og:title" content="Second Sight Scientific">
+<meta property="og:description" content="Medical editing and clinical review by Ranju Welch, OD. A second set of eyes with a clinician&rsquo;s firsthand view.">
+<meta property="og:image" content="https://secondsightscientific.com/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Archivo:wght@400;500&display=swap" rel="stylesheet">
@@ -142,10 +154,13 @@ nav[aria-label="Primary"] a:hover{border-bottom-color:var(--oxblood)}
 }
 .hero h1 em{font-style:italic;font-weight:380}
 @media (max-width:700px){ .hero h1 br{display:none} }
-.hero-rule{
-  width:64px;height:1px;background:var(--rule);
-  margin:2.4rem auto;border:0;
+/* printer's ornament: the mark between two short hairlines */
+.hero-ornament{
+  display:flex;align-items:center;justify-content:center;gap:1rem;
+  margin:2.2rem auto;color:var(--ink);
 }
+.hero-ornament::before,.hero-ornament::after{content:"";width:40px;height:1px;background:var(--rule)}
+.hero-ornament svg{width:34px;height:34px;display:block}
 .hero .lede{
   max-width:var(--measure);margin-inline:auto;
   font-size:1.06rem;color:var(--ink-70);
@@ -313,6 +328,8 @@ footer{border-top:1px solid var(--rule)}
   color:var(--ink-70);font-size:.8rem;
 }
 .footer-inner a{color:var(--ink-70)}
+.footer-brand{display:flex;align-items:center;gap:.65rem}
+.footer-brand svg{width:22px;height:22px;display:block;color:var(--ink);flex:none}
 .linkish{
   font-size:var(--caps-size);letter-spacing:var(--caps-track);text-transform:uppercase;
   font-weight:500;color:var(--ink-70);
@@ -463,6 +480,23 @@ footer{border-top:1px solid var(--rule)}
     </g>
     <circle cx="60" cy="60" r="1.6" fill="#6E2A24"/>
   </symbol>
+  <!-- small-size variant: the hairlines above fall below 1px under ~40px and
+       vanish on HiDPI, so the header, hero ornament and footer use this one -->
+  <symbol id="emblem-small" viewBox="0 0 120 120">
+    <circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="1.25" vector-effect="non-scaling-stroke"/>
+    <circle cx="60" cy="60" r="51" fill="none" stroke="currentColor" stroke-width="0.75" opacity="0.55" vector-effect="non-scaling-stroke"/>
+    <g fill="none" stroke="#6E2A24" stroke-width="4" stroke-linecap="round">
+      <path d="M 4.3 -6.4 C 3.2 -8.3 0.4 -9.1 -1.8 -8.3 C -4.3 -7.4 -5 -4.6 -3.2 -2.8 C -1.6 -1.2 1.5 -1.4 3.2 0.3 C 5 2.1 5.2 5.1 3.2 6.9 C 1 8.8 -2.5 8.6 -4.3 6.5" transform="translate(60 34)"/>
+      <path d="M 4.3 -6.4 C 3.2 -8.3 0.4 -9.1 -1.8 -8.3 C -4.3 -7.4 -5 -4.6 -3.2 -2.8 C -1.6 -1.2 1.5 -1.4 3.2 0.3 C 5 2.1 5.2 5.1 3.2 6.9 C 1 8.8 -2.5 8.6 -4.3 6.5" transform="rotate(120 60 60) translate(60 34)"/>
+      <path d="M 4.3 -6.4 C 3.2 -8.3 0.4 -9.1 -1.8 -8.3 C -4.3 -7.4 -5 -4.6 -3.2 -2.8 C -1.6 -1.2 1.5 -1.4 3.2 0.3 C 5 2.1 5.2 5.1 3.2 6.9 C 1 8.8 -2.5 8.6 -4.3 6.5" transform="rotate(240 60 60) translate(60 34)"/>
+    </g>
+    <g stroke="currentColor" stroke-width="1" opacity="0.7">
+      <line x1="60" y1="20" x2="60" y2="14" transform="rotate(60 60 60)" vector-effect="non-scaling-stroke"/>
+      <line x1="60" y1="20" x2="60" y2="14" transform="rotate(180 60 60)" vector-effect="non-scaling-stroke"/>
+      <line x1="60" y1="20" x2="60" y2="14" transform="rotate(300 60 60)" vector-effect="non-scaling-stroke"/>
+    </g>
+    <circle cx="60" cy="60" r="2.2" fill="#6E2A24"/>
+  </symbol>
 </svg>
 
 <a class="skip-link" href="#main">Skip to content</a>
@@ -489,23 +523,7 @@ footer{border-top:1px solid var(--rule)}
   <div class="wrap header-inner">
     <a class="brand" href="#top" aria-label="Second Sight Scientific—home">
       <span id="brandMark" class="mark" aria-hidden="true">
-        <!-- inlined (not <use>) so the mark paints reliably inside the
-             backdrop-filter header on every engine -->
-        <svg width="36" height="36" viewBox="0 0 120 120" focusable="false">
-          <circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="1.25" vector-effect="non-scaling-stroke"/>
-          <circle cx="60" cy="60" r="51" fill="none" stroke="currentColor" stroke-width="0.75" opacity="0.55" vector-effect="non-scaling-stroke"/>
-          <g fill="none" stroke="#6E2A24" stroke-width="3.4" stroke-linecap="round">
-            <path d="M 4.3 -6.4 C 3.2 -8.3 0.4 -9.1 -1.8 -8.3 C -4.3 -7.4 -5 -4.6 -3.2 -2.8 C -1.6 -1.2 1.5 -1.4 3.2 0.3 C 5 2.1 5.2 5.1 3.2 6.9 C 1 8.8 -2.5 8.6 -4.3 6.5" transform="translate(60 34)"/>
-            <path d="M 4.3 -6.4 C 3.2 -8.3 0.4 -9.1 -1.8 -8.3 C -4.3 -7.4 -5 -4.6 -3.2 -2.8 C -1.6 -1.2 1.5 -1.4 3.2 0.3 C 5 2.1 5.2 5.1 3.2 6.9 C 1 8.8 -2.5 8.6 -4.3 6.5" transform="rotate(120 60 60) translate(60 34)"/>
-            <path d="M 4.3 -6.4 C 3.2 -8.3 0.4 -9.1 -1.8 -8.3 C -4.3 -7.4 -5 -4.6 -3.2 -2.8 C -1.6 -1.2 1.5 -1.4 3.2 0.3 C 5 2.1 5.2 5.1 3.2 6.9 C 1 8.8 -2.5 8.6 -4.3 6.5" transform="rotate(240 60 60) translate(60 34)"/>
-          </g>
-          <g stroke="currentColor" stroke-width="1" opacity="0.7">
-            <line x1="60" y1="20" x2="60" y2="14" transform="rotate(60 60 60)" vector-effect="non-scaling-stroke"/>
-            <line x1="60" y1="20" x2="60" y2="14" transform="rotate(180 60 60)" vector-effect="non-scaling-stroke"/>
-            <line x1="60" y1="20" x2="60" y2="14" transform="rotate(300 60 60)" vector-effect="non-scaling-stroke"/>
-          </g>
-          <circle cx="60" cy="60" r="2.2" fill="#6E2A24"/>
-        </svg>
+        <svg width="36" height="36" viewBox="0 0 120 120" focusable="false"><use href="#emblem-small"/></svg>
       </span>
       <span class="brand-name">Second Sight Scientific</span>
     </a>
@@ -526,8 +544,10 @@ footer{border-top:1px solid var(--rule)}
   <!-- ————————————————— hero ————————————————— -->
   <section class="hero wrap" id="top" aria-labelledby="hero-title">
     <p class="sc eyebrow fp">Independent Medical Communications Support</p>
-    <h1 id="hero-title" class="fp" style="--fd:70ms">A <em>Second Set of Eyes</em><br>With a Clinician&rsquo;s Firsthand View</h1>
-    <hr class="hero-rule fp" aria-hidden="true" style="--fd:130ms">
+    <h1 id="hero-title" class="fp" style="--fd:70ms">A <em>Second Set of Eyes</em> <br>With a Clinician&rsquo;s Firsthand View</h1>
+    <div class="hero-ornament fp" aria-hidden="true" style="--fd:130ms">
+      <svg viewBox="0 0 120 120" focusable="false"><use href="#emblem-small"/></svg>
+    </div>
     <p class="lede fp" style="--fd:180ms">
       Second Sight Scientific is the consulting practice of Ranju&nbsp;Welch,&nbsp;OD, a practicing
       optometrist with agency-side medical communications experience. She provides overflow editing,
@@ -645,7 +665,7 @@ footer{border-top:1px solid var(--rule)}
 
 <footer>
   <div class="wrap footer-inner">
-    <p>&copy; 2026 Second Sight Scientific LLC · Austin, Texas</p>
+    <p class="footer-brand"><svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#emblem-small"/></svg><span>&copy; 2026 Second Sight Scientific LLC · Austin, Texas</span></p>
     <p><a href="mailto:ranju@secondsightscientific.com">ranju@secondsightscientific.com</a></p>
     <button id="replayIntro" class="linkish" type="button">Replay intro</button>
   </div>
